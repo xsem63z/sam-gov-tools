@@ -30,13 +30,15 @@ Setup:
     3. OTTER_EMAIL / OTTER_PASSWORD — your Otter.ai login credentials
     4. SAM_GOV_API_KEY       — optional, free at sam.gov/profile/details
 """
-
+import os
 import requests
 import time
 import re
 from datetime import datetime, timedelta
 import hubspot
 from hubspot.crm.deals import SimplePublicObjectInputForCreate, ApiException
+from dotenv import load_dotenv
+load_dotenv()
 
 # Otter unofficial API
 try:
